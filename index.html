@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <header>
+        <h1>DATA TYPE : ARRAY </h1>
+    </header>
+    <section>
+        <h4>TABLE : ARRAY LOOP THROUGH</h4>
+        <h2>Print Any table up to 10 Times</h2>
+        <form onsubmit="tableCheck(); return false">
+            <label for="tableinput">Enter any number to print table :</label><br>
+            <input type="number" name="input" required id="tableinput"><br>
+            <button type="submit">Print</button>
+        </form>
+        <p id="result"></p>
+    </section>
+    <h4>JS code to print table</h4>
+    <p>function tableCheck() {</p>
+    <p>let tableinput = +document.getElementById(`tableinput`).value;</p>
+    <p>document.querySelector("#result").innerHTML = "";</p>
+    <p>for (let i = 0; i < 10; i++) {</p>
+    <p>document.querySelector("#result").innerHTML += `&lt;h3&gt; ${tableinput} x ${i + 1} = ${tableinput * (i + 1)} &lt;/h3&gt;`}}</p>
+
+    <script>
+        function tableCheck() {
+            let tableinput = +document.getElementById(`tableinput`).value;
+            document.querySelector("#result").innerHTML = "";
+            for (let i = 0; i < 10; i++) {
+                document.querySelector("#result").innerHTML += `<h3>${tableinput} x ${i + 1} = ${tableinput * (i + 1)}</h3>`
+            }
+        }
+    </script>
+    <section>
+        <p>let myNum = 5; // number, 64 bit floating number</p>
+        <p>let name = `My isn't my car` // 2 bytes per character x 17 = 34 bytes </p>
+        <p> let isOpen = true; // 1 bit, boolean</p>
+        <p>MAX_SAFE_INTEGER is the maximum number that JS can save</p>
+    </section>
+    <section>
+        <h4>CLIENT INPUT:</h4>
+        <p> This is the array of 5 indexes. <br>
+            let myArray = [myNum, name, "name", isOpen, "anothername", 43]</p>
+
+        <form onsubmit="conditioncheck(); return false;">
+            <label for="myNum">Enter myNum:</label>
+            <input type="number" required id="myNum" placeholder="Enter any number"> <br><br>
+            <label for="name">Enter name:</label>
+            <input type="text" required id="name" placeholder="Enter any name"><br><br>
+            <button type="check">check</button>
+        </form>
+    </section>
+    <p id="myArray">index:value</p>
+    <p id="MAX_SAFE_INTEGER"></p>
+
+    <P></P>
+    <P></P>
+    <P></P>
+    <P></P>
+    <P></P>
+
+    <Script>
+        function conditioncheck() {
+
+            let myNum = +document.querySelector("#myNum").value; // number, 64 bit floating number
+            let name = document.querySelector("#name").value // 2 bytes per character x 17 = 34 bytes 
+            let isOpen = true; // 1 bit, boolean
+            let MAX_SAFE_INTEGER = ("#MAX_SAFE_INTEGER", Number.MAX_SAFE_INTEGER)
+            let myArray = [myNum, name, "name", isOpen, "anothername", 43]
+
+            myArray.map((eachValue, index) => {
+                console.log(`${index}: ${eachValue}`)
+                document.querySelector("#myArray").innerHTML += `<br>       ${index}   :   ${eachValue}<br>`
+            })
+            document.querySelector("#MAX_SAFE_INTEGER").innerHTML = `${MAX_SAFE_INTEGER}`
+        }
+        // document.querySelector(`my`).innerHTML = `${my}`
+        // document.querySelector("#myArray").innerHTML = `${myArray[1]}`
+        // document.querySelector("#myArray").innerHTML = `${myArray[2]}`
+        // document.querySelector("#myArray").innerHTML = `${myArray[3]}`
+        // document.querySelector("#myArray").innerHTML = `${myArray[4]}`
+        // document.querySelector("#myArray").innerHTML = `${myArray[5]}`
+        // document.querySelector("#myArray").innerHTML = `qwqw ${myArray}`
+    </Script>
+    
+</body>
+
+</html>
